@@ -1,4 +1,4 @@
-# 🧠 NLP Analyzer API  
+# NLP Analyzer API  
 A production-ready NLP service built using **FastAPI**, **HuggingFace Transformers**, **LangChain FAISS Vector Store**, and **MLflow** for experiment tracking and model comparison.
 
 This project provides:
@@ -12,7 +12,7 @@ This project provides:
 
 ---
 
-## 🚀 Features
+## Features
 
 ### **1. Sentiment Analysis**
 Uses:
@@ -46,7 +46,7 @@ You can easily replace the model with:
 ---
 
 ### **3. Semantic Search (FAISS + LangChain)**
-- Embedding Model: **all-mpnet-base-v2**
+- Embedding Model: **sentence-transformers/all-mpnet-base-v2**
 - Every FAISS index is saved with **versioning**
 - Search uses vector similarity.
 - New texts are automatically appended and indexed.
@@ -93,15 +93,15 @@ Track:
 
     ```bash
     uvicorn app:app --reload --host 0.0.0.0 --port 8000
-    Swagger UI is available at "http://localhost:8000/docs"
+Swagger UI is available at "http://localhost:8000/docs"
 
 ### 4. MLflow Tracking (MLOps)
-    We use MLflow to track model behavior & store experiment logs.
+We use MLflow to track model behavior & store experiment logs.
 
     ```bash
     mlflow ui --port 5000
 
-    Open in browser at "http://127.0.0.1:5000
+Open in browser at "http://127.0.0.1:5000
 
 
 
