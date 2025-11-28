@@ -25,16 +25,16 @@ A FastAPI-based NLP project that provides **Text Sentiment Analysis**, **Keyword
 
 ## **Folder Structure**
 
-```bash
-AI_Project/
-│
-├─ app.py # FastAPI app
-├─ models.py # NLP models for sentiment, summarization, keywords
-├─ vector_store.py # FAISS-based VectorStore with versioning
-├─ schemas.py # Pydantic schemas
-├─ requirements.txt # Python dependencies
-├─ Dockerfile # Docker setup
-├─ README.md # Project documentation
+    ```bash
+    AI_Project/
+    │
+    ├─ app.py # FastAPI app
+    ├─ models.py # NLP models for sentiment, summarization, keywords
+    ├─ vector_store.py # FAISS-based VectorStore with versioning
+    ├─ schemas.py # Pydantic schemas
+    ├─ requirements.txt # Python dependencies
+    ├─ Dockerfile # Docker setup
+    ├─ README.md # Project documentation
 
 ## **Setup Instructions**
 
@@ -44,16 +44,19 @@ AI_Project/
     cd AI_Project
 
 ### 2.  Install dependicies
-python -m venv myenv
-source myenv/bin/activate       # Linux/macOS
-myenv\Scripts\activate          # Windows
-pip install --upgrade pip
-pip install -r requirements.txt
+
+    ```bash
+    python -m venv myenv
+    source myenv/bin/activate       # Linux/macOS
+    myenv\Scripts\activate          # Windows
+    pip install --upgrade pip
+    pip install -r requirements.txt
 
 ### 3.Run with FastAPI
 
-uvicorn app:app --reload --host 0.0.0.0 --port 8000
-Swagger UI is available at "http://localhost:8000/docs"
+    ```bash
+    uvicorn app:app --reload --host 0.0.0.0 --port 8000
+    Swagger UI is available at "http://localhost:8000/docs"
 
 
 
