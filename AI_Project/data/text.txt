@@ -1,3 +1,5 @@
 Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph
 I love working with AI! It makes everything efficient.
 Australia is a constitutional monarchy with a parliamentary democracy, and a federation comprising six states and ten territories. Its population of almost 28 million is highly urbanised and heavily concentrated on the eastern seaboard.
+A debugger is a computer program used to test and debug other programs. Common features of debuggers include the ability to run or halt the target program using breakpoints
+I don't like the way the humans are treating animals

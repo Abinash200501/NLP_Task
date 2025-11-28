@@ -2,6 +2,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from pathlib import Path
+import mlflow
 
 class VectorStore:
     def __init__(self, store_folder="faiss_index"):
@@ -29,6 +30,7 @@ class VectorStore:
                 str(self.faiss_store / f"index_v{self.version-1}"),
                 self.embed_model
             )
+
 
     def add_text(self, text: str):
         """Add a text string to FAISS index."""

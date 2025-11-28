@@ -1,6 +1,24 @@
-### virtual env ###
-myenv
+# MLflow
+.mlruns/
+mlartifacts/
+mlflow.db
 
-### cache ###
-*.__pycache__
+# FAISS Index files
+faiss_index/
+*.faiss
+*.pkl
+
+# Python / Build
+__pycache__/
 *.pyc
+.env
+myenv/
+venv/
+.env/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/

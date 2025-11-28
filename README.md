@@ -1,40 +1,77 @@
-# AI NLP API
+# 🧠 NLP Analyzer API  
+A production-ready NLP service built using **FastAPI**, **HuggingFace Transformers**, **LangChain FAISS Vector Store**, and **MLflow** for experiment tracking and model comparison.
 
-A FastAPI-based NLP project that provides **Text Sentiment Analysis**, **Keyword Extraction**, **Summarization**, and **Semantic Search** using **Transformers** and **FAISS embeddings**. The project is containerized with **Docker** and includes **automatic model versioning**.
-
----
-
-## **Features**
-
-1. **Text Sentiment & Keyword Analysis**
-   - Endpoint: `/analyze`
-   - Returns sentiment (`positive`, `negative`, `neutral`) and top 5 keywords from text.
-
-2. **Text Summarization**
-   - Endpoint: `/summarize`
-   - Summarizes input text with Transformers.
-
-3. **Semantic Search**
-   - Endpoint: `/semantic-search`
-   - Stores embeddings using **FAISS** and returns top similar texts based on cosine similarity.
-
-4. **Model Versioning**
-   - Text embeddings and FAISS index are versioned automatically for reproducibility.
+This project provides:
+- ✔ Sentiment Analysis  
+- ✔ Text Summarization  
+- ✔ Semantic Search using FAISS  
+- ✔ Automatic Vector Store Versioning  
+- ✔ MLflow-based Model Performance Tracking  
+- ✔ Dockerized Deployment  
+- ✔ (Optional) CI/CD Pipeline Support  
 
 ---
 
-## **Folder Structure**
+## 🚀 Features
 
-    ```bash
-    AI_Project/
-    │
-    ├─ app.py 
-    ├─ models.py 
-    ├─ vector_store.py 
-    ├─ schemas.py 
-    ├─ requirements.txt 
-    ├─ Dockerfile 
-    ├─ README.md 
+### **1. Sentiment Analysis**
+Uses:
+- `tabularisai/multilingual-sentiment-analysis`
+
+Logged with:
+- Model name  
+- Latency  
+- Input size  
+- Output  
+
+MLflow allows comparing future models simply by replacing the model path.
+
+---
+
+### **2. Text Summarization**
+Uses:
+- `t5-small`
+
+MLflow logs:
+- Model name  
+- Processing time  
+- Full input/output artifacts  
+- Summary quality testing over time  
+
+You can easily replace the model with:
+- `facebook/bart-large-cnn`
+- `google/pegasus-xsum`
+- `Falcon-instruct`, etc.
+
+---
+
+### **3. Semantic Search (FAISS + LangChain)**
+- Embedding Model: **all-mpnet-base-v2**
+- Every FAISS index is saved with **versioning**
+- Search uses vector similarity.
+- New texts are automatically appended and indexed.
+
+---
+
+### **4. Automatic Model & Index Versioning**
+Each time your app starts:
+- `version.txt` increments
+- A new FAISS index folder is created
+- MLflow logs the version used
+
+This makes the project **fully auditable & MLOps compliant**.
+
+---
+
+### **5. MLflow Tracking**
+Track:
+- Sentiment Model Performance  
+- Summarization Model Performance  
+- FAISS Index Version  
+- Latency Metrics  
+- Input Length  
+- Output Artifacts  
+
 
 ## **Setup Instructions**
 
@@ -57,6 +94,15 @@ A FastAPI-based NLP project that provides **Text Sentiment Analysis**, **Keyword
     ```bash
     uvicorn app:app --reload --host 0.0.0.0 --port 8000
     Swagger UI is available at "http://localhost:8000/docs"
+
+### 4. MLflow Tracking (MLOps)
+    We use MLflow to track model behavior & store experiment logs.
+
+    ```bash
+    mlflow ui --port 5000
+
+    Open in browser at "http://127.0.0.1:5000
+
 
 
 
