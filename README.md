@@ -25,6 +25,7 @@ A FastAPI-based NLP project that provides **Text Sentiment Analysis**, **Keyword
 
 ## **Folder Structure**
 
+```bash
 AI_Project/
 │
 ├─ app.py # FastAPI app
