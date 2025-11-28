@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+transformers
+torch
+nltk
+pydantic
+sentencepiece
+protobuf
+langchain
+langchain_community
+langchain_huggingface
+sentence-transformers
+faiss-cpu

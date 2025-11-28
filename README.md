@@ -28,19 +28,19 @@ A FastAPI-based NLP project that provides **Text Sentiment Analysis**, **Keyword
     ```bash
     AI_Project/
     │
-    ├─ app.py # FastAPI app
-    ├─ models.py # NLP models for sentiment, summarization, keywords
-    ├─ vector_store.py # FAISS-based VectorStore with versioning
-    ├─ schemas.py # Pydantic schemas
-    ├─ requirements.txt # Python dependencies
-    ├─ Dockerfile # Docker setup
-    ├─ README.md # Project documentation
+    ├─ app.py 
+    ├─ models.py 
+    ├─ vector_store.py 
+    ├─ schemas.py 
+    ├─ requirements.txt 
+    ├─ Dockerfile 
+    ├─ README.md 
 
 ## **Setup Instructions**
 
 ### 1. Clone the repository
     ```bash
-    git clone <repo_url>
+    git clone https://github.com/Abinash200501/NLP_Task.git
     cd AI_Project
 
 ### 2.  Install dependicies
