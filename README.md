@@ -2,13 +2,13 @@
 A production-ready NLP service built using **FastAPI**, **HuggingFace Transformers**, **LangChain FAISS Vector Store**, and **MLflow** for experiment tracking and model comparison.
 
 This project provides:
-- ✔ Sentiment Analysis  
-- ✔ Text Summarization  
-- ✔ Semantic Search using FAISS  
-- ✔ Automatic Vector Store Versioning  
-- ✔ MLflow-based Model Performance Tracking  
-- ✔ Dockerized Deployment  
-- ✔ (Optional) CI/CD Pipeline Support  
+- Sentiment Analysis  
+- Text Summarization  
+- Semantic Search using FAISS  
+- Automatic Vector Store Versioning  
+- MLflow-based Model Performance Tracking  
+- Dockerized Deployment  
+- (Optional) CI/CD Pipeline Support  
 
 ---
 
