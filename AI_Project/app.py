@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from schemas import Analyze, Summary, SemanticSearchRequest
-from models import sentiment_analysis, extract_keyword, sum_pipeline
+from models import sentiment_analysis, extract_keyword, sum_pipeline, sent_pipeline
 from vector_store import vector_db
 from pathlib import Path
 import mlflow
@@ -8,7 +8,7 @@ import time
 
 app = FastAPI()
 
-mlflow.set_experiment("nlp-analyzer")
+mlflow.set_experiment("nlp-task")
 
 
 @app.get("/home")
@@ -35,14 +35,17 @@ def analyze(req: Analyze):
 
     vector_db.add_text(text=text)
 
-    with mlflow.start_run(run_name="analyze-text"):
+    model_name = sent_pipeline.model.name_or_path
 
+    with mlflow.start_run(run_name=f"analyze-text-{model_name}"):
+
+        mlflow.log_param("model", model_name)
         mlflow.log_param("faiss_version", vector_db.version)
         mlflow.log_param("input_length", len(text))
         
         mlflow.log_metric("inference_time_seconds", inference_time)
 
-        with open("analyze_output.txt", "w") as f:
+        with open("analyze_output.txt", "a") as f:
             f.write("INPUT:\n")
             f.write(text)
             f.write("\n\nSENTIMENT:\n")
@@ -82,7 +85,7 @@ def summarize(req: Summary):
         mlflow.log_param("input_length", len(text))
         mlflow.log_metric("latency_seconds", latency)
 
-        with open("summary_output.txt", "w") as f:
+        with open("summary_output.txt", "a") as f:
             f.write("INPUT:\n")
             f.write(text)
             f.write("\n\nOUTPUT:\n")

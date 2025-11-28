@@ -1,0 +1,13 @@
+INPUT:
+What is the cricket which we are watching
+
+OUTPUT:
+what is the cricket cricket which we are watching? what is cricket cricket cricket . what is a cricket cricket that we are . watching? . if you have a question, please contact us at cricket.ireport.com .INPUT:
+summarize the regression in machine learning
+
+OUTPUT:
+summarize the regression in machine learning in a re-run of machine learning and a regression analysis of the regression regression in the machine learning process . if you have a problem with a machine learning system, you should be able to find a way to improve your learning experience.INPUT:
+summarize the regression in machine learning
+
+OUTPUT:
+summarize the regression in machine learning in a re-run of machine learning and a regression analysis of the regression regression in the machine learning process . if you have a problem with a machine learning system, you should be able to find a way to improve your learning experience.

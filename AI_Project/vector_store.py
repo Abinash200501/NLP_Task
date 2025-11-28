@@ -50,7 +50,7 @@ class VectorStore:
     def search(self, query: str, top_k: int = 3):
         """Search similar text."""
         query_embedding = self.embed_model.embed_query(query)
-        results = self.faiss_index.similarity_search_by_vector(
+        results = self.faiss_index.similarity_search_with_score_by_vector(
             embedding=query_embedding,
             k=top_k
         )

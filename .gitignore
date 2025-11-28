@@ -1,5 +1,5 @@
 # MLflow
-.mlruns/
+mlruns/
 mlartifacts/
 mlflow.db
 

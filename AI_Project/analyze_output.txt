@@ -1,0 +1,22 @@
+INPUT:
+Absolutely. As I said earlier, we are a much better side than what we showed before these last two couple of weeks. I’m very proud of the boys - the energy, the attitude, and the contributions from everyone was fantastic today.
+
+SENTIMENT:
+neutral
+
+KEYWORDS:
+['much', 'better', 'side', 'last', 'couple']INPUT:
+Maths is the fundamental thing in ML and some people don't want to learn maths...
+
+SENTIMENT:
+negative
+
+KEYWORDS:
+['maths', 'fundamental', 'thing', 'ml', 'people']INPUT:
+Maths is the fundamental thing in ML and some people don't want to learn maths...
+
+SENTIMENT:
+negative
+
+KEYWORDS:
+['maths', 'fundamental', 'thing', 'ml', 'people']
